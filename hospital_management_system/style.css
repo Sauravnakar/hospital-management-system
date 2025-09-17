@@ -1,0 +1,274 @@
+
+/* Global Styles */
+
+/* Reset and normalize browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Body Styles */
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/023/639/130/non_2x/molecular-structure-with-hospital-cross-for-medical-chemistry-and-science-concept-background-illustration-vector.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent header background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: right;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    padding-right: 20px;
+    text-transform: lowercase; /* Change header h1 to lowercase */
+}
+
+/* Global Container */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    color: black; /* Set text color to black in the global container */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: rgba(40, 167, 69, 0.8); /* Semi-transparent green */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #218838;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+form input[type="submit"],
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+td {
+    background-color: #f9f9f9;
+    color: #495057;
+}
+
+tr:hover td {
+    background-color: #e9ecef;
+}
+
+/* Alerts */
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.info {
+    background-color: #2196F3;
+}
+
+.alert.warning {
+    background-color: #ff9800;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: modalOpen 0.3s;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button in Modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form textarea {
+        font-size: 1rem;
+    }
+}
